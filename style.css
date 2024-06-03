@@ -1,0 +1,577 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.purple {
+  color: #bb86fc;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navigation bar */
+
+nav {
+  height: 8vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff80;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.right-nav {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  justify-content: end;
+}
+
+.right-nav a {
+  padding: 0 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 200;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, font-weight 0.3s, color 0.3s;
+}
+
+.right-nav .nav-link:hover {
+  background-color: #bb86fc;
+  font-weight: 600;
+  color: #000000;
+}
+
+.right-nav .nav-link.active {
+  background-color: #bb86fc;
+  font-weight: 600;
+  color: #000000;
+}
+
+.left-nav {
+  width: 50%;
+  display: flex;
+  height: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.left-nav span {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.left-nav #logo-hub {
+  color: #bb86fc;
+}
+
+/* CodeHub section */
+#codehub-section-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92vh;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+#codehub-section-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 25%;
+}
+
+#codehub-section-1 h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#codehub-section-1 p {
+  font-size: 25px;
+}
+
+#codehub-section-1 .join-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 0 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+}
+
+#codehub-section-1 .subscribe-btn {
+  background-color: #bb86fc;
+  color: #000000;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 0 5px;
+
+  &:hover {
+    background-color: rgba(187, 134, 252, 0.8);
+    cursor: pointer;
+  }
+}
+
+#codehub-section .gradient {
+  height: 35vh;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(18, 18, 18, 1) 70%
+  );
+}
+
+/* membership */
+#membership-section {
+  display: flex;
+  height: 92vh;
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(3, 34, 31, 1) 8%,
+    rgba(27, 16, 43, 1) 35%,
+    rgba(18, 18, 18, 1) 42%
+  );
+}
+
+#membership-title {
+  font-weight: 600;
+  font-size: 50px;
+  margin: 0 80px;
+  width: 30%;
+  box-sizing: border-box;
+  height: 70%;
+}
+
+#membership-section section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#membership-section .price-lbl {
+  display: flex;
+  align-items: end;
+  padding: 0 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#membership-section .price {
+  font-size: 50px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+#membership-section .duration {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+#membership-free {
+  width: 25%;
+  height: 80%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0 40px 0 100px;
+  background: linear-gradient(
+    135deg,
+    rgba(50, 22, 87, 1) 35%,
+    rgba(0, 0, 0, 1) 90%
+  );
+}
+
+#membership-free h1 {
+  padding: 60px 0 0px 40px;
+  font-weight: 600;
+  font-size: 40px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+
+#membership-free div {
+  display: flex;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+#membership-free ul {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 30px 0 60px;
+}
+
+#membership-free button {
+  background-color: #00000000;
+  border: 3px solid #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  margin: 20px 40px;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 3px #ffffff;
+    cursor: pointer;
+  }
+}
+
+#membership-premium {
+  width: 25%;
+  height: 80%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0 0 0 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 73, 68, 1) 40%,
+    rgba(0, 0, 0, 1) 85%
+  );
+}
+
+#membership-premium h1 {
+  padding: 60px 0 0px 40px;
+  font-weight: 600;
+  font-size: 40px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+}
+
+#membership-premium div {
+  display: flex;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+#membership-premium ul {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 40px 0 60px;
+}
+
+#membership-premium button {
+  background-color: #00000000;
+  border: 3px solid #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  margin: 20px 40px;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 3px #ffffff;
+    cursor: pointer;
+  }
+}
+
+#membership-section li {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* about us */
+#about-us-section {
+  height: 92vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#about-us-section iframe {
+  width: 60%;
+  height: 80%;
+}
+
+#about-us-section .about-us-quote {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+}
+
+#about-us-section p {
+  font-weight: 600;
+  font-size: 30px;
+  font-style: italic;
+  margin: 0;
+}
+
+#about-us-section .codehub-team-lbl {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+/* Sign Up Section */
+#sign-up-section {
+  box-sizing: border-box;
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+#card-container {
+  position: relative;
+  transition: transform 1500ms;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 2px #ffffff80;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+#sign-up-card {
+  background-image: url(./Assets/programming-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sign-up-card #gradient {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    70deg,
+    rgba(18, 18, 18, 1) 60%,
+    rgba(18, 18, 18, 0.5) 100%
+  );
+  padding: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#sign-up-card h1 {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#sign-up-card form {
+  width: 30%;
+  box-sizing: border-box;
+}
+
+#sign-up-card form #name-field {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#sign-up-card form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #121212;
+  font-size: 18px;
+  border: 1px solid #ffffff80;
+}
+
+#sign-up-card form .label {
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  margin-left: 3px;
+}
+
+#sign-up-card form button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background-color: #bb86fc;
+  border: none;
+  font-size: 20px;
+  color: #000000;
+
+  &:hover {
+    background-color: rgba(187, 134, 252, 0.8);
+    cursor: pointer;
+  }
+}
+
+#sign-up-card form a {
+  color: #ffffff;
+  margin-left: 3px;
+
+  &:hover {
+    color: #bb86fc;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+#sign-in-card {
+  background-image: url(./Assets/programming-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+#sign-in-card #gradient {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    70deg,
+    rgba(18, 18, 18, 0.5) 0%,
+    rgba(18, 18, 18, 1) 40%
+  );
+  padding: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+#sign-in-card h1 {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#sign-in-card form {
+  width: 30%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#sign-in-card form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: #121212;
+  font-size: 18px;
+  border: 1px solid #ffffff80;
+}
+
+#sign-in-card form .label {
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 12px;
+  margin-left: 3px;
+}
+
+#sign-in-card form button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background-color: #bb86fc;
+  border: none;
+  font-size: 20px;
+  color: #000000;
+
+  &:hover {
+    background-color: rgba(187, 134, 252, 0.8);
+    cursor: pointer;
+  }
+}
+
+#sign-in-card form a {
+  color: #ffffff;
+  margin-left: 3px;
+
+  &:hover {
+    color: #bb86fc;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.mr12 {
+  margin-right: 12px;
+}
+
+/* Notification */
+#notification {
+  display: none;
+  position: fixed;
+  padding: 20px;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #cf6679;
+  color: #000000;
+  border-radius: 10px;
+  font-size: 18px;
+  opacity: 0;
+  visibility: hidden;
+}

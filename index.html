@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link rel="icon" href="./Assets/logo.jpg" type="image/x-icon" />
+    <title>CodeHub</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div class="left-nav">
+        <a href=""
+          ><span id="logo-code">Code</span><span id="logo-hub">Hub</span></a
+        >
+      </div>
+      <div class="right-nav">
+        <a
+          onclick="scrollToElement('codehub-section')"
+          href="#codehub-section"
+          class="nav-link active"
+          >CodeHub!</a
+        >
+        <a
+          onclick="scrollToElement('membership-section')"
+          href="#membership-section"
+          class="nav-link"
+          >Membership</a
+        >
+        <a
+          onclick="scrollToElement('about-us-section')"
+          href="#about-us-section"
+          class="nav-link"
+          >About Us</a
+        >
+        <a
+          onclick="scrollToElement('sign-up-section')"
+          href="#sign-up-section"
+          class="nav-link"
+          >Sign Up</a
+        >
+      </div>
+    </nav>
+
+    <!-- Codehub! -->
+    <section id="codehub-section">
+      <div id="codehub-section-1">
+        <img src="./Assets/programming-1.avif" alt="programming-1" />
+        <h1>
+          Welcome to <span style="font-weight: 600">Code</span
+          ><span style="font-weight: 600; color: #bb68fc">Hub</span>
+        </h1>
+        <p>The community to handle your programming worries</p>
+        <div>
+          <button
+            onclick="scrollToElement('membership-section')"
+            class="join-btn"
+          >
+            Join Our Free Community!
+          </button>
+          <span style="font-weight: 600; font-size: 20px">Or</span>
+          <button
+            onclick="scrollToElement('membership-section')"
+            class="subscribe-btn"
+          >
+            Get More With Membership!
+          </button>
+        </div>
+        <div class="gradient"></div>
+      </div>
+    </section>
+    <!-- Membership -->
+    <section id="membership-section">
+      <h1 id="membership-title">Find the perfect membership plan for you</h1>
+      <div id="membership-free">
+        <h1>Free</h1>
+        <div>
+          <ul>
+            <li>Connection with fellow programmers</li>
+            <li>Categorized chat and voice channels for discussion</li>
+            <li>Occasional training session for basic materials</li>
+            <li>Occasional project case for basic materials</li>
+            <li>Leave anytime</li>
+          </ul>
+          <section>
+            <span class="price-lbl"
+              ><span class="price">$0</span
+              ><span class="duration">/ lifetime</span></span
+            >
+            <button
+              onclick="window.open('https://discord.com/invite/tG5x2UkPTy', '_blank')"
+            >
+              Join
+            </button>
+          </section>
+        </div>
+      </div>
+      <div id="membership-premium">
+        <h1>Premium</h1>
+        <div>
+          <ul>
+            <li>Connection with fellow programmers</li>
+            <li>
+              Categorized chat and voice channels for discussion with experts
+            </li>
+            <li>Weekly training session for multiple materials by experts</li>
+            <li>Weekly project case for multiple materials from experts</li>
+            <li>AI prompting training to improve programming</li>
+            <li>Programming news update</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <section>
+            <span class="price-lbl"
+              ><span class="price">$5</span
+              ><span class="duration">/lifetime</span></span
+            >
+            <button onclick="scrollToElement('sign-up-section')">
+              Sign Up
+            </button>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- About Us -->
+    <section id="about-us-section">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/5N_fQuJ0SuM?si=FIsJiOuMava_Dhu3"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <div class="about-us-quote">
+        <p>
+          "We aim to create a platform for everyone to
+          <span class="purple bold italic">discuss</span>,
+          <span class="purple bold italic">learn</span>, and
+          <span class="purple bold italic">train</span> programming. Code<span
+            class="purple bold italic"
+            >Hub</span
+          >
+          is what we created and we're still going for more"
+        </p>
+        <div class="codehub-team-lbl">
+          - Code<span class="purple">Hub</span> Team
+        </div>
+      </div>
+    </section>
+    <!-- Sign Up Section -->
+    <section id="sign-up-section">
+      <div id="card-container">
+        <div class="card" id="sign-up-card">
+          <div id="gradient">
+            <h1>Sign Up for Code<span class="purple bold">Hub</span></h1>
+            <form action="POST" onsubmit="signUp(event)" id="sign-up-form">
+              <p class="label">Name</p>
+              <div id="name-field">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="mr12"
+                  id="sign-up-first-name"
+                  name="sign-up-first-name"
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  id="sign-up-last-name"
+                  name="sign-up-last-name"
+                />
+              </div>
+              <p class="label">Email</p>
+              <input
+                id="sign-up-email"
+                name="sign-up-name"
+                type="text"
+                placeholder="Email"
+              />
+              <p class="label">Password</p>
+              <input
+                id="sign-up-password"
+                name="sign-up-password"
+                type="password"
+                name=""
+                id=""
+                placeholder="Password"
+              />
+              <p class="label">Confirm Password</p>
+              <input
+                id="sign-up-conf-password"
+                name="sign-up-conf-password"
+                type="password"
+                placeholder="Confirm Password"
+              />
+              <p class="label">Discord Username</p>
+              <input
+                id="sign-up-discord-username"
+                name="sign-up-discord-username"
+                type="text"
+                placeholder="Discord Username"
+              />
+              <button type="submit">Sign Up</button>
+              <a onclick="flipCard()"
+                >Already a member? Sign in to your account here!</a
+              >
+            </form>
+          </div>
+        </div>
+        <div class="card" id="sign-in-card">
+          <div id="gradient">
+            <h1>Sign In to Code<span class="purple bold">Hub</span></h1>
+            <form id="sign-in-form" action="POST" onsubmit="signIn(event)">
+              <p class="label">Email</p>
+              <input
+                id="sign-in-email"
+                name="sign-in-email"
+                type="text"
+                placeholder="Email"
+              />
+              <p class="label">Password</p>
+              <input
+                id="sign-in-password"
+                name="sign-in-password"
+                type="password"
+                name=""
+                id=""
+                placeholder="Password"
+              />
+              <button type="submit">Sign In</button>
+              <a onclick="flipCard()">Not a member yet? Sign up here!</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="notification">Error: adfadsfasdfasdfasdfasdfasdf</div>
+  </body>
+</html>
